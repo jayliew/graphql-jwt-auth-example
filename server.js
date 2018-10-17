@@ -19,7 +19,7 @@ const PORT = 3000
 // graphql endpoint
 app.use('/api', bodyParser.json(), auth,
   graphqlExpress(req => ({
-      schema, context: { user: req.user}
+     schema: schema, context: { user: req.user }
     })
   )
 )
